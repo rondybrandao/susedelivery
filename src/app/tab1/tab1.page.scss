@@ -1,4 +1,42 @@
-.welcome-card img {
-  max-height: 35vh;
-  overflow: hidden;
+ion-toolbar {
+  --background: red;
+    //--webkit-background-size: cover;
+    color: white;
+    font-family: fantasy;  
+    text-align: center;
+}
+ion-content {
+  //--background: url('../../assets/bg.jpg')
+}
+ion-item {
+  margin-top: -18px;
+  text-align: center;
+}
+ion-note {
+  margin-left: 130px ;
+}
+
+ion-card {
+  background: floralwhite;
+}
+img {
+  width: 30%;
+  margin-left: 0px;
+}
+
+.icon-entregador {
+  --background: cornflowerblue;
+  margin-top: 0px;
+}
+#total {
+  margin-left: 130px;
+  color: red;
+  font-size: 25px;
+}
+#horario {
+  margin-left: 240px;
+  margin-top: -17px;
+}
+section {
+  margin-left: 9px;
 }

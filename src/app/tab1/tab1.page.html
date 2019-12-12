@@ -1,41 +1,123 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Tab One
+      S.U.S.E eat 
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-    <ion-card class="welcome-card">
-      <img src="/assets/shapes.svg" alt="" />
+    <ion-button expand="full" fill="outline">Lista de pedidos</ion-button>
+    <ion-card>
       <ion-card-header>
-        <ion-card-subtitle>Get Started</ion-card-subtitle>
-        <ion-card-title>Welcome to Ionic</ion-card-title>
+        <ion-card-subtitle>Pedido 010</ion-card-subtitle>
+        <div id="horario">20:19hr</div>
+        <ion-card-title color="primary">João</ion-card-title>
+        
       </ion-card-header>
+      
       <ion-card-content>
-        <p>Now that your app has been created, you'll want to start building out features and components. Check out some of the resources below for next steps.</p>
+        <ion-item id="item-content">
+          <ion-label class="ion-text-wrap">
+            <ion-item>
+              <ion-checkbox color="danger" checked slot="end"></ion-checkbox>
+              <ion-label>X-Burg</ion-label>
+            </ion-item>
+            
+              <ion-item>
+              <ion-checkbox color="danger" checked slot="end"></ion-checkbox>
+              <ion-label>X-Salada</ion-label>
+            </ion-item>
+            
+              <ion-item>
+              <ion-checkbox color="danger" checked slot="end"></ion-checkbox>
+              <ion-label>X-Tudo</ion-label>
+            </ion-item>
+            
+              <ion-item>
+              <ion-checkbox color="danger" checked slot="end"></ion-checkbox>
+              <ion-label>Coca-cola 2L</ion-label>
+            </ion-item>
+          </ion-label>
+        </ion-item>
+        <div id="total">Total: <strong>R$15,00</strong></div>
+        <ion-note>Troco para R$ 20,00</ion-note>
       </ion-card-content>
+      <section>
+          <!--<ion-button color="dark">Fechar Pedido</ion-button>
+          <ion-button color="success">chamar</ion-button>-->
+
+          <ion-grid>
+            <ion-row>
+              <ion-col>
+                <div><ion-button color="dark">Fechar Pedido</ion-button></div>
+              </ion-col>
+              <ion-col>
+                <ion-item class="icon-entregador">
+                  <img slot="end" src="assets/man-with-a-bag-in-a-bicycle.png"/>
+                  <ion-label color="success">chamar</ion-label>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+        </ion-grid>
+
+        </section>
     </ion-card>
-    <ion-list lines="none">
-      <ion-list-header>
-        <ion-label>Resources</ion-label>
-      </ion-list-header>
-      <ion-item href="https://ionicframework.com/docs/">
-        <ion-icon slot="start" color="medium" name="book"></ion-icon>
-        <ion-label>Ionic Documentation</ion-label>
-      </ion-item>
-      <ion-item href="https://ionicframework.com/docs/building/scaffolding">
-        <ion-icon slot="start" color="medium" name="build"></ion-icon>
-        <ion-label>Scaffold Out Your App</ion-label>
-      </ion-item>
-      <ion-item href="https://ionicframework.com/docs/layout/structure">
-        <ion-icon slot="start" color="medium" name="grid"></ion-icon>
-        <ion-label>Change Your App Layout</ion-label>
-      </ion-item>
-      <ion-item href="https://ionicframework.com/docs/theming/basics">
-        <ion-icon slot="start" color="medium" name="color-fill"></ion-icon>
-        <ion-label>Theme Your App</ion-label>
-      </ion-item>
-    </ion-list>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-subtitle>Pedido 011</ion-card-subtitle>
+        <div id="horario">22:37hr</div>
+        <ion-card-title color="primary">Guilherme</ion-card-title>
+        
+      </ion-card-header>
+      
+      <ion-card-content>
+        <ion-item id="item-content">
+          <ion-label class="ion-text-wrap">
+            <ion-item>
+              <ion-checkbox color="danger" checked slot="end"></ion-checkbox>
+              <ion-label>X-Salada</ion-label>
+            </ion-item>
+            
+              <ion-item>
+              <ion-checkbox color="danger" checked slot="end"></ion-checkbox>
+              <ion-label>X-Bacon</ion-label>
+            </ion-item>
+            
+              <ion-item>
+              <ion-checkbox color="danger" checked slot="end"></ion-checkbox>
+              <ion-label>X-Tudo</ion-label>
+            </ion-item>
+            
+              <ion-item>
+              <ion-checkbox color="danger" checked slot="end"></ion-checkbox>
+              <ion-label>Coca-cola 2L</ion-label>
+            </ion-item>
+          </ion-label>
+        </ion-item>
+        <div id="total">Total: <strong>R$35,00</strong></div>
+        <ion-note>Troco para R$ 50,00</ion-note>
+      </ion-card-content>
+      <section>
+          <!--<ion-button color="dark">Fechar Pedido</ion-button>
+          <ion-button color="success">chamar</ion-button>-->
+
+          <ion-grid>
+            <ion-row>
+              <ion-col>
+                <div><ion-button color="dark">Fechar Pedido</ion-button></div>
+              </ion-col>
+              <ion-col>
+                <ion-item class="icon-entregador">
+                  <img slot="end" src="assets/man-with-a-bag-in-a-bicycle.png"/>
+                  <ion-label color="success">chamar</ion-label>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+        </ion-grid>
+
+        </section>
+    </ion-card>
+    
 </ion-content>

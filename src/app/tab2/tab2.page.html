@@ -1,9 +1,121 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Tab Two
+      F i n a n c e i r o
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content>
+  <ion-grid>
+    <!--<ion-button expand="full" fill="outline"><h4>Total de entregas</h4></ion-button>-->
+    <ion-row>
+        <ion-col id="dia" size="6">
+          <div>Mês</div>
+          <ion-label><strong>30</strong><ion-note> pedidos</ion-note></ion-label>
+        </ion-col>
+        <ion-col id="acumulado" size="6">
+          <div>Total acumulado</div>
+          <ion-label><strong>R$ 90,00</strong><ion-note> reais</ion-note></ion-label>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col id="dia" size="6">
+          <div>Dia</div>
+          <ion-label><strong>10</strong><ion-note>pedidos</ion-note></ion-label>
+        </ion-col>
+        <ion-col id="acumulado" size="6">
+          <div>Acumulado do dia</div>
+          <ion-label><strong>R$ 30,00</strong><ion-note> reais</ion-note></ion-label>
+        </ion-col>
+      </ion-row>
+      <!-- Segment with default selection -->
+      <ion-segment (ionChange)="segmentChanged($event)" value="viagens">
+        <ion-segment-button value="viagens">
+          <ion-label>Pedidos</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="recebidos">
+          <ion-label>Recebidos</ion-label>
+        </ion-segment-button>
+         <ion-segment-button value="historico">
+          <ion-label>Historico</ion-label>
+        </ion-segment-button>
+      </ion-segment>
+      
+      
+      <div [ngSwitch]="category">
+
+        <section *ngSwitchCase="'viagens'">
+          <ion-button expand="full" fill="outline"><h6>Pedidos</h6></ion-button>
+          <ion-list>
+            <ion-item>
+              <ion-label>25/10/2019</ion-label>
+              <div>9 pedidos</div>
+              <ion-note>R$ 127,00</ion-note>
+            </ion-item>
+            <ion-item>
+              <ion-label>26/10/2019</ion-label>
+              <div>12 pedidos</div>
+              <ion-note>R$ 153,00</ion-note>
+            </ion-item>
+            <ion-item>
+              <ion-label>27/10/2019</ion-label>
+              <div>11 pedidos</div>
+              <ion-note>R$ 160,00</ion-note>
+            </ion-item>
+
+          </ion-list>
+        </section>
+        <section *ngSwitchCase="'recebidos'">
+          <ion-button expand="full" fill="outline"><h4>Valores Pagos</h4></ion-button>
+          <ion-list >
+            <ion-item>
+              <ion-label>26/10/2019</ion-label>
+              <div>R$ 20.00</div>
+              <ion-badge color="tertiary" slot="end">pago</ion-badge>
+              <!--<ion-note>total 51.00 reais</ion-note>-->
+            </ion-item>
+            <ion-item>
+              <ion-label>27/11/2019</ion-label>
+              <div>R$ 20.00</div>
+              <ion-badge color="tertiary" slot="end">pago</ion-badge>
+              <!--<ion-note>total 87.00 reais</ion-note>-->
+            </ion-item>
+            <ion-item>
+              <ion-label>28/12/2019</ion-label>
+              <div>R$ 20.00</div>
+              <ion-badge color="warning" slot="end">aberto</ion-badge>
+              <!--<ion-note>total 141.00 reais</ion-note>-->
+            </ion-item>
+
+          </ion-list>
+        </section>
+
+        <section section *ngSwitchCase="'historico'">
+          <ion-button expand="full" fill="outline"><h4>Historico</h4></ion-button>
+          <ion-list >
+            <ion-item>
+              <ion-label>Dezembro</ion-label>
+              <div>R$ 370.00</div>
+              <ion-badge color="tertiary" slot="end">17 pedidos</ion-badge>
+              <!--<ion-note>total 510.00 reais</ion-note>-->
+            </ion-item>
+            <ion-item>
+              <ion-label>Janeiro</ion-label>
+              <div>R$ 587.00</div>
+              <ion-badge color="tertiary" slot="end">25 pedidos</ion-badge>
+              <!--<ion-note>total 670.00 reais</ion-note>-->
+            </ion-item>
+            <ion-item>
+              <ion-label>Fevereiro</ion-label>
+              <div>R$ 698.00</div>
+              <ion-badge color="tertiary" slot="end">37 pedidos</ion-badge>
+              <!--<ion-note>total 810.00 reais</ion-note>-->
+            </ion-item>
+
+          </ion-list>
+        </section>
+
+      </div>
+  </ion-grid>
+</ion-content>
